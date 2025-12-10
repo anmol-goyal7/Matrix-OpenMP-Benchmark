@@ -58,10 +58,12 @@ int main() {
 
     printf("=== Matrix Multiplication Benchmark ===\n\n");
 
-    printf("Enter value for Matrix A: ");
+    printf("Enter value for Matrix A: \n");
+    printf("The number that you'll choose will be there in the entire matrix of 1000 elemets");
     scanf("%d", &val1);
 
-    printf("Enter value for Matrix B: ");
+    printf("Enter value for Matrix B: ");    
+    printf("The number that you'll choose will be there in the entire matrix of 1000 elemets")
     scanf("%d", &val2);
 
     printf("\nPreparing matrices...\n");
