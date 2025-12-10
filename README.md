@@ -95,10 +95,4 @@ for (i = 0; i < SIZE; i++) {
         // ... matrix logic
     }
 }
-```
 
------
-
-
-  * Freshman, B.Tech CSE (SWE) @ SRM University
-  * [GitHub Profile](https://www.google.com/search?q=https://github.com/anmol-goyal7)
