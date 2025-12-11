@@ -58,13 +58,13 @@ You need a C compiler that supports OpenMP (like GCC).
     *Note: You must include the `-fopenmp` flag.*
 
     ```bash
-    gcc -o matrix_test main.c -fopenmp
+    gcc -o matrix-openmp-benchmark.c main.c -fopenmp
     ```
 
 3.  **Execute:**
 
     ```bash
-    ./matrix_test
+    ./matrix-openmp-benchmark
     ```
 
 -----
