@@ -8,7 +8,7 @@ A C program that demonstrates the raw power of **parallel computing** by benchma
 
 ## 🚀 Overview
 
-Matrix multiplication is a computationally intensive operation with a complexity of $O(N^3)$. This project allows you to visualize the performance gains achieved by utilizing multi-core processors.
+Matrix multiplication is a computationally intensive operation with a complexity of O(N^3). This project allows you to visualize the performance gains achieved by utilizing multi-core processors.
 
 **The program performs the following:**
 
@@ -50,7 +50,7 @@ You need a C compiler that supports OpenMP (like GCC).
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/anmol-goyal7/your-repo-name.git
+    git clone https://github.com/anmol-goyal7/Matrix-OpenMP-Benchmark.git
     cd your-repo-name
     ```
 
