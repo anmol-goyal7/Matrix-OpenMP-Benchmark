@@ -5,7 +5,7 @@ Parallel matrix multiplication using OpenMP, benchmarked against a serial implem
 ## Results
 
 - Matrix size: 1000x1000
-- Speedup: 4.72x over serial (thread count depends on available cores, uses `omp_get_max_threads()`)
+- Speedup: 3.79x over serial -- 4.25s down to 1.12s (thread count depends on available cores, uses `omp_get_max_threads()`)
 - Complexity: O(N^3) -- 1 billion multiply-add operations at N=1000
 
 ## How It Works
