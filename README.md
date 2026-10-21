@@ -29,10 +29,21 @@ Choose option 3 when prompted to run both methods and see the comparison.
 
 ## Sample Output
 
+Option 3, with both matrices filled with 2 and 3 (timings from the run quoted above):
+
 ```
-Without OpenMP: 4.250000 seconds
-With OpenMP:    1.120000 seconds
-----------------------------------------
-Speedup:        3.79x faster
-Time saved:     3.130000 seconds (73.6%)
+========== Comparison ==========
+Normal:    4.250000 sec
+OpenMP:    1.120000 sec
+Speedup:   3.79x faster
+Saved:     3.130000 sec (73.6%)
+================================
+
+Sample elements:
+C[0][0] = 6000
+C[0][999] = 6000
+C[999][0] = 6000
+C[999][999] = 6000
 ```
+
+Timings depend on the machine, the thread count and the optimisation level (the build line above uses none).

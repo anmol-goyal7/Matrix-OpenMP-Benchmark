@@ -3,7 +3,7 @@
 #include <time.h>
 #include <omp.h>
 
-#define N 1000  
+#define N 1000
 
 void fillArray(int **arr, int filler) {
     for (int r = 0; r < N; r++) {
@@ -50,21 +50,36 @@ int main() {
     B = malloc(N * sizeof(int *));
     C = malloc(N * sizeof(long long *));
 
+    if (A == NULL || B == NULL || C == NULL) {
+        fprintf(stderr, "out of memory\n");
+        return 1;
+    }
+
     for (int i = 0; i < N; i++) {
         A[i] = malloc(N * sizeof(int));
         B[i] = malloc(N * sizeof(int));
         C[i] = malloc(N * sizeof(long long));
+        if (A[i] == NULL || B[i] == NULL || C[i] == NULL) {
+            fprintf(stderr, "out of memory\n");
+            return 1;
+        }
     }
 
     printf("=== Matrix Multiplication Benchmark ===\n\n");
 
-    printf("Enter value for Matrix A: \n");
-    printf("The number that you'll choose will be there in the entire matrix of 1000 elemets");
-    scanf("%d", &val1);
+    printf("Every element of each %dx%d matrix is set to the value you enter.\n", N, N);
 
-    printf("Enter value for Matrix B: ");    
-    printf("The number that you'll choose will be there in the entire matrix of 1000 elemets")
-    scanf("%d", &val2);
+    printf("Enter value for Matrix A: ");
+    if (scanf("%d", &val1) != 1) {
+        fprintf(stderr, "invalid number\n");
+        return 1;
+    }
+
+    printf("Enter value for Matrix B: ");
+    if (scanf("%d", &val2) != 1) {
+        fprintf(stderr, "invalid number\n");
+        return 1;
+    }
 
     printf("\nPreparing matrices...\n");
 
@@ -76,7 +91,10 @@ int main() {
     printf("2. OpenMP parallel multiplication\n");
     printf("3. Run and compare both\n");
     printf("Enter option: ");
-    scanf("%d", &option);
+    if (scanf("%d", &option) != 1 || option < 1 || option > 3) {
+        fprintf(stderr, "option must be 1, 2 or 3\n");
+        return 1;
+    }
 
     printf("\n");
 
